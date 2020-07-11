@@ -27,5 +27,16 @@ __Why scaling data helps:__
 __When to Scale data:__
 Rule of thumb is too scale it whenever algorithm uses distance(similarities) or assumes normality. For ex, you need to scale in k-means neighbours(euclidean distance based), but not required in [tree based model](https://www.quora.com/Decision-Tree-based-models-dont-require-scaling-How-does-scaling-impact-the-predictions-of-decision-tree-based-models).
 
+![When to scale](https://i.stack.imgur.com/OKOsB.png)
+
 __Ways to scale data:__(Done over each feature)
 * *Standardization* rescales data to have mean = 0 and variance = 1
+
+    x' = (𝑥 − 𝜇)/𝜎 
+* *Min-max Normalization* rescales data to range [0,1]
+    
+    x' = (x-x<sub>min</sub>)/(x<sub>max</sub>-x<sub>min</sub>)
+* *Scaling to unit length*
+  x' = x/||x||
+
+### Converting to Numeric Data
