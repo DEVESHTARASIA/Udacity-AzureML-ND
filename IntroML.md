@@ -15,5 +15,17 @@
 - Image
 - *Tabular Data(multiple objects(rows) with multiple features(columns))*
 
-__It's all numerical in the end. The model works with numbers, so others are transformed to numerical__
+*It's all numerical in the end. The model works with numbers, so others are transformed to numerical*
 
+### Scaling Data/Features
+Scaling data means transforming it so that the values fit within some range or scale, such as 0–100 or 0–1. Algorithm doesn't understand units. It doesn't understand that 10A can be a lot but 10m can be very less.
+
+__Why scaling data helps:__
+* The output of the algorithm is not affected
+* Can help speed up training as the algorithms need to handle numbers less than the given range
+
+__When to Scale data:__
+Rule of thumb is too scale it whenever algorithm uses distance(similarities) or assumes normality. For ex, you need to scale in k-means neighbours(euclidean distance based), but not required in [tree based model](https://www.quora.com/Decision-Tree-based-models-dont-require-scaling-How-does-scaling-impact-the-predictions-of-decision-tree-based-models).
+
+__Ways to scale data:__(Done over each feature)
+* *Standardization* rescales data to have mean = 0 and variance = 1
